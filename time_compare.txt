@@ -1,0 +1,6 @@
+DateTime get nowTime => DateTime.now();
+DateTime get today => DateTime(nowTime.year, nowTime.month, nowTime.day);
+DateTime get nextDay => today.add(const Duration(days: 1));
+String get thisWeek => '${nowTime.year}${nowTime.weekOfYear}';
+DateTime get thisMonth => DateTime(nowTime.year, nowTime.month, 1);
+DateTime get thisYear => DateTime(nowTime.year, 1, 1);
