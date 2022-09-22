@@ -1,0 +1,5 @@
+ios pod file install:
+
+arch -x86_64 pod install
+arch -x86_64 pod update
+
