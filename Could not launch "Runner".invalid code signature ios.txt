@@ -1,1 +1,7 @@
 The operation couldn’t be completed. Unable to launch com.blackshadow.appname because it has an invalid code signature, inadequate entitlements or its profile has not been explicitly trusted by the user.
+
+
+solution:
+
+Please check the internet connection of the Testing IOS device, Signature verification fails if device isn't connected to Internet.
+
