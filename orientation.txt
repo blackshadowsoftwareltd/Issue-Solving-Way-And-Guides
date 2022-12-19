@@ -1,0 +1,9 @@
+For Android (Orientation lock (Portrait))
+
+<activity
+	android:name=".MainActivity"
+	.........
+	........
+	android:screenOrientation="portrait"
+	........
+	>
