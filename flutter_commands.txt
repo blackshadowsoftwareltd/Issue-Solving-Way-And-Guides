@@ -1,9 +1,0 @@
-link:
-https://docs.flutter.dev/reference/flutter-cli
-
-==========================================================================================
-Clean Flutter Sdk Pub Cache
->> Remove .pubChach directory from Flutter directory
-then run this command in the terminal
->> flutter precache
-==========================================================================================
