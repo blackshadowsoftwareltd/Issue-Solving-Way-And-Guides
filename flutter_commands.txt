@@ -9,7 +9,14 @@ then run this command in the terminal
 ==========================================================================================
 
 Android Build : 
+```
+flutter build apk --split-per-abi
+```
+or :
+```
 flutter build apk --split-debug-info=. --release
-
+```
 From Mac: 
+```
 flutter build apk --split-debug-info=. --release && flutter build ios --split-debug-info=. --release
+```
