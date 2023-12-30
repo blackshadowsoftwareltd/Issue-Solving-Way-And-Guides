@@ -1,6 +1,0 @@
-VSCode. 
-1. Right-click on the directory button.
-2. Open in integrated terminal.
-4. type in terminal : 
-	ln -s /tergate_path
-	Press enter
