@@ -1,8 +1,16 @@
 ```
-DateTime get nowTime => DateTime.now(); // now
-DateTime get today => DateTime(nowTime.year, nowTime.month, nowTime.day); //? today 
-DateTime get nextDay => today.add(const Duration(days: 1)); //? nextday
-String get thisWeek => '${nowTime.year}${nowTime.weekOfYear}'; //? this week 
-DateTime get thisMonth => DateTime(nowTime.year, nowTime.month, 1); //? this month 
-DateTime get thisYear => DateTime(nowTime.year, 1, 1); //? this year 
+Launching lib/main.dart on Linux in debug mode...
+CMake Error at /snap/flutter/141/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:463 (message):
+A required package was not found
+Call Stack (most recent call first):
+/snap/flutter/141/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake:643 (_pkg_check_modules_internal)
+flutter/ephemeral/.plugin_symlinks/audioplayers_linux/linux/CMakeLists.txt:24 (pkg_check_modules)
 ```
+
+Here's the relevant bit showing which packages are required:
+https://github.com/bluefireteam/audioplayers/blob/2333cb7f5a9fcd84bdd477120d1f53f346c3b10d/packages/audioplayers_linux/linux/CMakeLists.txt#L20C1-L26C64
+
+
+- installe
+
+'gstreamer-audio' ,'gstreamer-audio-sys' , & 'gstreamer-app'
