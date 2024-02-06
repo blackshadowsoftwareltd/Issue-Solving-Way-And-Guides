@@ -13,4 +13,4 @@ https://github.com/bluefireteam/audioplayers/blob/2333cb7f5a9fcd84bdd477120d1f53
 
 - installe
 
-'gstreamer-audio' ,'gstreamer-audio-sys' , & 'gstreamer-app'
+`gstreamer-audio` ,`gstreamer-audio-sys` , & `gstreamer-app`
