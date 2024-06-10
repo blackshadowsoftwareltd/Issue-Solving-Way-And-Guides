@@ -31,6 +31,8 @@ create a file inside the root directory `distribute_options.yaml`
 
 and add the following content:
 
+- note: this configuration is combined for both Linux DEB and RPM.
+
 ```yaml
 variables:
   PGYER_API_KEY: "your api key"
@@ -57,7 +59,6 @@ releases:
 create a file inside the Linux directory `linux/packaging/rpm/make_config.yaml`
 
 and add the following content:
-note: this configuration is combined for both Linux DEB and RPM.
 
 ```yaml
 display_name: My App Name # Change this to your app name.

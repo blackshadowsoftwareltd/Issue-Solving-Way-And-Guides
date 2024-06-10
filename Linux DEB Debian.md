@@ -30,7 +30,8 @@ dart pub global activate flutter_distributor
 create a file inside the root directory `distribute_options.yaml`
 
 and add the following content:
-note: this configuration is combined for both Linux DEB and RPM.
+
+- note: this configuration is combined for both Linux DEB and RPM.
 
 ```yaml
 variables:
