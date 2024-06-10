@@ -1,6 +1,6 @@
-# Flutter Linux Release Build on Fedora
+# Flutter Linux Release Build on Ubuntu
 
-## .RPM Red Hat Package Manager
+## .DEB Debian
 
 Install Patchelf
 
@@ -30,6 +30,7 @@ dart pub global activate flutter_distributor
 create a file inside the root directory `distribute_options.yaml`
 
 and add the following content:
+note: this configuration is combined for both Linux DEB and RPM.
 
 ```yaml
 variables:
@@ -54,45 +55,51 @@ releases:
 
 ## Step 3
 
-create a file inside the Linux directory `linux/packaging/rpm/make_config.yaml`
+create a file inside the Linux directory `linux/packaging/deb/make_config.yaml`
 
 and add the following content:
-note: this configuration is combined for both Linux DEB and RPM.
 
 ```yaml
-display_name: My App Name # Change this to your app name.
-icon: linux/assets/logo.png # Change this to your app icon.
-summary: A Flutter application for Linux. # Change this to your app summary.
-group: Applications/Development Tools
-vendor: BlackShadowSoftware # Change this to your company name.
-packager: Remon Ahammad # Change this to your name.
-packagerEmail: remonahammad@gmail.com # Change this to your email.
-license: ASL 2.0
-url: https://github.com/blackshadowsoftwareltd # Change this to your app repository.
+display_name: My App Name # The name of the application
+package_name: com.example.app_id # The package name of the application
 
-# build_arch: aarch64
-BuildArch: noarch
+maintainer:
+  name: Remon Ahammad # The name of the maintainer
+  email: remonahammad@gmail.com # The email of the maintainer
 
-requires:
+priority: optional
+
+section: x11
+
+installed_size: 15700
+
+dependencies:
   - mpv
 
+essential: false
+
+icon: linux/assets/logo.png # The path to the icon file
+
+postuninstall_scripts:
+  - echo "Sorry to see you go." # The script to run after the application is uninstalled
+
 keywords:
-  - API
-  - My App Name # Change this to your app name.
+  - BlackShadowSoftware # The keywords for the application
+  - My App Name # The keywords for the application
 
-generic_name: My App Name # Change this to your app name.
+generic_name: My App Name # The generic name of the application
 
-categories: 
+categories: # The categories for the application
   - Development
-  - Network # Change this to your app category.
+  - Network
 
 startup_notify: true
 ```
 
 ## Step 4
 
-Run this command to build the RPM package.
+Run this command to build the Debian package.
 
 ```bash
-flutter_distributor release --name=dev --jobs=release-dev-linux-rpm
+flutter_distributor release --name=dev --jobs=release-dev-linux-deb
 ```
