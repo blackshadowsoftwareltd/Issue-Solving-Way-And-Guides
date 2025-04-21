@@ -7,7 +7,7 @@ sudo apt-get -y update
 sudo apt-get install coturn
 ```
 
-### Opent the `coturn` file by `sudo nano /etc/default/coturn` command and set it: `TURNSERVER_ENABLED=1`
+### Open the `coturn` file by `sudo nano /etc/default/coturn` command and set it: `TURNSERVER_ENABLED=1`
 
 #### Then config the `turnserver.conf` file. Open it by `sudo nano /etc/turnserver.conf` and set this config and change your Public IP address
 
